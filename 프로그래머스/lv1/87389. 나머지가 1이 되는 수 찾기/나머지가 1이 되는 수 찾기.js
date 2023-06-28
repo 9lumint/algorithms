@@ -1,9 +1,7 @@
-function solution(n) {
-    let nums = 1;
-     while(nums >= 1){
-         if(n % nums === 1){
-             return nums;
+function solution(n, x = 1) {
+     while(x++){
+         if(n % x === 1){
+             return x;
          }
-         nums++;
      }
 }
