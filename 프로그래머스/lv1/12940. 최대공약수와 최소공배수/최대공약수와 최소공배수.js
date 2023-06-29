@@ -1,5 +1,5 @@
 function mod(n, m) {
-    return n % m ? mod(m, n % m) : m;
+    return m ? mod(m, n % m) : n;
 }
 
 function solution(n, m) {
