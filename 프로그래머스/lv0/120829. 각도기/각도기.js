@@ -1,6 +1,3 @@
 function solution(angle) {
-    if(!(angle % 90)){
-        return angle / 45;
-    } 
-    return angle < 90 ? 1 : 3;
+    return !(angle % 90) ? angle / 45 : angle < 90 ? 1 : 3;
 }
