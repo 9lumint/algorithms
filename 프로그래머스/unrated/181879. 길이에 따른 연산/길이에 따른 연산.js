@@ -1,3 +1,3 @@
-function solution(num_list) {
-    return num_list.length >= 11 ? num_list.reduce((a, c) => a + c) : num_list.reduce((a, c) => a * c);
+function solution(nums) {
+    return nums.reduce((a, c) => nums.length >= 11 ? a + c : a * c);
 }
