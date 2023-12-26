@@ -1,14 +1,16 @@
 function solution(participant, completion) {
-  participant.sort();
-  completion.sort();
-  while (completion.length > 0) {
-    if (
-      participant[participant.length - 1] !== completion[completion.length - 1]
-    ) {
-      return participant[participant.length - 1];
-    }
-    participant.pop();
-    completion.pop();
+  const map = new Map();
+
+  for (let i = 0; i < participant.length; i++) {
+    let a = participant[i], b = completion[i];
+
+    map.set(a, (map.get(a) || 0) + 1);
+    map.set(b, (map.get(b) || 0) - 1);
   }
-  return participant[0];
+
+  for (let [k, v] of map) {
+    if (v > 0) {
+      return k;
+    }
+  }
 }
