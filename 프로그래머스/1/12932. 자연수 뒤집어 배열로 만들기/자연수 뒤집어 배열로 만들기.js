@@ -1,8 +1,8 @@
 function solution(n) {
-  const answer = [];
-  const str = [...String(n)];
-  while (str.length > 0) {
-    answer.push(+str.pop());
-  }
-  return answer;
+    const answer = [];
+    while(n > 0){
+        answer.push(n % 10);
+        n = Math.floor(n / 10);
+    }
+    return answer;
 }
